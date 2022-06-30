@@ -1,0 +1,34 @@
+.footer {
+  padding: $content_width;
+  font-size: 0.9rem;
+  .f-wrapper {
+    @include base_flex(row, flex-start, space-between);
+    flex-wrap: wrap;
+    padding: 50px 20px;
+    a,
+    p {
+      color: $color_light_grey;
+    }
+  }
+  .f-logo {
+    flex-grow: 1;
+    p {
+      margin-top: 20px;
+    }
+    .confidence {
+      text-decoration: underline;
+    }
+  }
+  &__item {
+    margin: 0 35px;
+    h3 {
+      color: $color_white;
+    }
+    li {
+      margin: 7px 0;
+    }
+  }
+  li:hover {
+    text-decoration: underline;
+  }
+}

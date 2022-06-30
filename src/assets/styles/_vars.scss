@@ -1,0 +1,24 @@
+//=============fonts==============//
+
+$regular_font: "Roboto", sans-serif;
+$titles_font: "EB Garamond", serif;
+
+// ============colors ============//
+$color_black: #031412;
+$color_white: #ffffff;
+$color_dark_green: #0b3f37;
+$color_brown: #795545;
+$color_light_grey: #adadad;
+
+$color_dark-brown_gradient: linear-gradient(92.18deg, #5e3928 20.13%, #e4a16f 92.93%);
+$color_brown_gradient: linear-gradient(92.18deg, #5e3928 -1003%, #e4a16f 92.93%);
+$color_green_gradient: linear-gradient(278.32deg, #0b3f37 -7.03%, #cb8d62 136.33%);
+
+//-------------font-size------------------------------
+$h1_title_size: 6.2rem;
+$product_title_size: 1.2rem;
+$section_title_size: 3.1rem;
+
+//-------------sizes-----------------------------------
+
+$content_width: 0 calc(50% - 720px);

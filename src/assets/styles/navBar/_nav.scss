@@ -1,0 +1,44 @@
+.nav {
+    padding:$content_width;
+}
+.nav-wrapper {
+    // @include base_flex(row, center, space-between);
+    // flex-wrap: wrap;
+    @include base_grid_row_col(auto, repeat(12, 1fr));
+    padding: 20px;
+    height: 100%;
+    .logo {
+        grid-column: 1 / span 3;
+    }
+    .main-nav {
+        @include base_flex(row, center, flex-start);
+        grid-column: 4 / span 6;
+        font-weight: 400;
+        opacity: 0.9;
+        &__item {
+            margin: 0 25px;
+        }
+        &__link {
+            padding: 10px 0;
+            transition: all 0.5s;
+            &:hover {
+                @include colored_text($color_brown_gradient);
+                @include colored_border($color_brown_gradient);
+                border-bottom: 1px solid;
+            }
+        }
+    }
+    .user-nav {
+        height: 100%;
+        grid-column: 10 / span 3;
+        @include base_flex(row, center, flex-end);
+        &__item {
+            @include base_flex(row, flex-end, center);
+            width: 50px;
+            height: 100%;
+            background-color: #fff;
+            padding: 5px;
+            margin: 0 0px 40px 20px;
+        }
+    }
+}

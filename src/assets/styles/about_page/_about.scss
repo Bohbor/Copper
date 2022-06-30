@@ -1,0 +1,127 @@
+.about-header {
+    padding: $content_width;
+    & .banner {
+        padding: 70px 20px;
+        @include base_flex(row, center, space-between);
+        height: 90vh;
+    }
+    &__text {
+        width: 40%;
+        & h1 {
+            @include adaptiv-font(120, 40);
+            font-weight: 200;
+        }
+        & p {
+            @include adaptiv-font(50, 20);
+            margin: 50px 0;
+            @include colored_text($color_dark_brown_gradient);
+        }
+        & .quote {
+            width: 100%;
+            @include adaptiv-font(50, 20);
+            font-style: italic;
+        }
+        & .author {
+            @include adaptiv-font(30, 16);
+            font-weight: 900;
+            @include base_flex(row, center, space-between);
+            & img {
+                width: 200px;
+            }
+        }
+    }
+    &__img {
+        width: 45%;
+    }
+}
+.clients {
+    padding: $content_width;
+    &-wrapper {
+        padding: 140px 20px;
+        @include base_flex(row, flex-start, space-between);
+    }
+    &__text {
+        width: 30%;
+        h2 {
+            @include section_title($color_black);
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    &__counter {
+        width: 55%;
+        h3 {
+            font-size: 3.1rem;
+            @include colored_text($color_dark-brown_gradient);
+        }
+        p {
+            @include adaptiv-font(200, 50);
+            font-weight: 900;
+        }
+    }
+}
+.history {
+    padding: $content_width;
+    color: $color_white;
+    min-height: 620px;
+    &-wrapper {
+        padding: 50px 20px;
+    }
+    h2 {
+        @include section_title($color_white);
+        text-align: center;
+    }
+    &__text {
+        @include base_flex(row, flex-start, center);
+        flex-wrap: wrap;
+        .column {
+            max-width: 440px;
+            padding: 0 20px;
+            p {
+                margin: 20px 0;
+                color: $color_light_grey;
+            }
+        }
+    }
+}
+.choose-us {
+    padding: 80px calc(50% - 720px);
+    &__wrapper {
+        padding: 0 20px;
+    }
+    h2 {
+        @include section_title($color_black);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__content {
+        @include base_flex(row, flex-start, center);
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 20%;
+        padding: 30px 0;
+        margin: 0 20px;
+        .c-logo {
+            padding: 15px;
+            width: 75px;
+            height: 75px;
+        }
+        h5 {
+            margin: 20px 0;
+            @include adaptiv-font(20, 15)
+        }
+        .hiden-text {
+            display: none;
+        }
+        .btn-show-more {
+            position: relative;
+            margin-top: 15px;
+            border: none;
+            @include colored_text($color_dark-brown_gradient);
+            cursor: pointer;
+        }
+    }
+}

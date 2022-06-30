@@ -1,0 +1,83 @@
+@import "./vars";
+@import "./mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+a {
+  color: $color_white;
+  font-family: $regular_font;
+  text-decoration: none;
+}
+img {
+  object-fit: contain;
+  width: 100%;
+  height:auto;
+}
+.logo {
+  width: 200px;
+}
+.social {
+  @include base_flex(row, center, space-between);
+  width: 100px;
+  &__link {
+    width: 20px;
+    height: 20px;
+    svg {
+      width: 24px;
+      height: 20px;
+      fill: #fff;
+    }
+    &:hover svg {
+      fill: $color_brown;
+    }
+  }
+}
+.active {
+  @include colored_text($color_brown_gradient);
+  @include colored_border($color_brown_gradient);
+  border-bottom: 1px solid;
+}
+.btn {
+  @include btn($color_dark-brown_gradient);
+  &:hover {
+    transform: scale(1.05)
+  }
+} 
+.btn-return {
+  color: #A1A1A1;
+  font-size: 1.1rem;
+  padding: 17px 0;
+  width: 100%;
+  max-width: 327px;
+  border: 1px solid #A1A1A1;
+  background: transparent;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05)
+  }
+}         
+
+@import "../styles/navBar/nav";
+
+@import "../styles/sliders/homePageHeaderSlider";
+@import "../styles/sliders/homePageReviewSlide";
+
+@import "../styles/home_page/home";
+@import "../styles/about_page/about";
+@import "../styles/catalog_page/catalog";
+@import '../styles/catalog_page/catalogitem';
+@import "../styles/basket/basket";
+@import "../styles/product-card/product-card";
+@import "../styles/profile/profile";
+@import "../styles/login/login";
+
+@import "../styles/footer/footer";
+
+@import "./media";

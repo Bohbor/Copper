@@ -1,0 +1,55 @@
+@mixin base_flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin base_grid_row_col($row, $col) {
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+}
+
+@mixin position_top_left($pos, $top, $left) {
+    position: $pos;
+    top: $top;
+    left: $left;
+}
+@mixin colored_border($border_color) {
+    border-image-slice: 1;
+    border-image-source: $border_color;
+}
+@mixin colored_text($color) {
+    background: $color;
+    background-clip: text;
+    color: transparent;
+}
+
+@mixin btn($color) {
+    padding: 17px 0;
+    width: 100%;
+    max-width: 327px;
+    color: $color_white;
+    font-size: 1.1rem;
+    background: $color;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin h1_title($color) {
+    font-size: $h1_title_size;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+@mixin section_title($color) {
+    @include adaptiv-font(45, 20 );
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+$maxWidth: 1400;
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

@@ -1,0 +1,134 @@
+.review-slider {
+    padding: 40px 20px;
+    @include base_flex(row, center, space-between);
+    &__item {
+        max-width: 400px;
+        padding: 20px 30px;
+        margin: 0 25px;
+        box-shadow: 0px 0px 40px #0000001a;
+        p {
+            margin: 18px 0;
+        }
+        .author__img {
+            margin: 18px 0;
+            width: 20%;
+        }
+        .author__qoute {
+            font-style: italic;
+        }
+    }
+}
+//=====================================================
+.carousel {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.carousel * {
+    box-sizing: border-box;
+}
+
+.carousel__track {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.carousel__viewport {
+    overflow: hidden;
+}
+.carousel__slide {
+    scroll-snap-stop: auto;
+    flex-shrink: 0;
+    margin: 0;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel__prev,
+.carousel__next {
+    background: transparent;
+    width: 70px;
+    height: var(--vc-nav-width);
+    text-align: center;
+    font-size: calc(var(--vc-nav-width) * 2 / 3);
+    padding: 0;
+    color: var(--vc-nav-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: 1px solid #031412;
+    cursor: pointer;
+    &:hover {
+        background-color: $color_dark-brown_gradient;
+    }
+}
+.carousel__next:hover .carousel__icon,
+.carousel__prev:hover .carousel__icon {
+    fill: #ffffff;
+}
+.carousel__next:hover,
+.carousel__prev:hover {
+    background: $color_dark-brown_gradient;
+    border: none;
+}
+
+.carousel__prev {
+    top: 50%;
+    left: -1px;
+}
+
+.carousel__next {
+    top: 50%;
+    right: -1px;
+}
+
+.carousel__pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.carousel__pagination-button {
+    margin: var(--vc-pgn-margin);
+    width: 10px;
+    height: 10px;
+    border: 0;
+    cursor: pointer;
+    background: $color_dark-brown_gradient;
+}
+
+.carousel__pagination-button--active {
+    background: #031412;
+    transform: scale(1.2);
+}
+.carousel__icon {
+    width: 20px;
+    height: 20px;
+    fill: black;
+}
+:root {
+    /* Color */
+    --vc-clr-primary: #642afb;
+    --vc-clr-secondary: #8e98f3;
+    --vc-clr-white: #ffffff;
+
+    /* Icon */
+    --vc-icn-width: 1.2em;
+
+    /* Navigation */
+    --vc-nav-width: 30px;
+    --vc-nav-color: #ffffff;
+    --vc-nav-background-color: var(--vc-clr-primary);
+
+    /* Pagination */
+    --vc-pgn-width: 10px;
+    --vc-pgn-height: 5px;
+    --vc-pgn-margin: 5px;
+    --vc-pgn-border-radius: 0;
+    --vc-pgn-background-color: var(--vc-clr-secondary);
+    --vc-pgn-active-color: var(--vc-clr-primary);
+}

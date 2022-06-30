@@ -1,0 +1,11 @@
+.product-item {
+    position: relative;
+    z-index: 1;
+    .product__favorite {
+        position: absolute;
+        z-index: 4;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
